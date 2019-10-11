@@ -13,14 +13,13 @@
 # Variables   #
 ###############
 title="Overlord"
-myname="Anandhu"
+myname=$USER
 hostname=$(hostname)
 
 ###############
 # Main        #
 ###############
-cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!"
 
-EOF
+welcome="Welcome to planet $hostname, $title $myname! It is $(date "+%I:%M%p") on $(date "+%A")"
+cowsay -f dragon $welcome
